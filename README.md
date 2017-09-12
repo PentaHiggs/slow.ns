@@ -17,7 +17,7 @@ It is assumed that file names will be of the form cat_1.\*, cat_2.\*, etc.
 
 ### Directory Structure
 ```
-dirname/
+----dirname/
 	|----/train
     	|       |----/cat_1
 	|	|----/cat_2
