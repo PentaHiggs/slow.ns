@@ -16,6 +16,7 @@ cat_1, cat_2, ... are the category names (no actual ellipses are to be used in t
 It is assumed that file names will be of the form cat_1.\*, cat_2.\*, etc.
 
 ### Directory Structure
+```
 dirname/
 	|----/train
     |       |----/cat_1
@@ -42,5 +43,4 @@ dirname/
 						.
 						.
 						.						
-
-
+```
