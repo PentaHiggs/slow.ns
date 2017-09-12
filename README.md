@@ -20,27 +20,30 @@ It is assumed that file names will be of the form cat_1.\*, cat_2.\*, etc.
 dirname/
 	|----/train
     	|       |----/cat_1
-	|		|----/cat_2
-	|			.
-	|			.
-	|			.
+	|	|----/cat_2
+	|		.
+	|		.
+	|		.
+	|
 	|----/valid
-	|		|----/cat_1
-	|		|----/cat_2
-	|			.
-	|			.
-	|			.
+	|	|----/cat_1
+	|	|----/cat_2
+	|		.
+	|		.
+	|		.
+	|
 	|----/sample
-			|----/train
-			|		|----/cat_1
-			|		|----/cat_2
-			|				.
-			|				.
-			|				.
-			|----/valid
-					|----/cat_1
-					|----/cat_2
-						.
-						.
-						.						
+		|----/train
+		|	|----/cat_1
+		|	|----/cat_2
+		|		.
+		|		.
+		|		.
+		|
+		|----/valid
+			|----/cat_1
+			|----/cat_2
+		`		.
+				.
+				.						
 ```
