@@ -24,7 +24,7 @@ do
 	cd $1/train/
 	find . -name $var".*" -exec mv -v -t ../$var/ {} +
 	#find $1/train/ -name $var".*" -exec mv -v -t ../$var {} +
-	cd ../../
+	cd -
 
 	echo "Copying $var into sample"
 	# Copy some into sample
