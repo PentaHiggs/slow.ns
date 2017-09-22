@@ -22,7 +22,7 @@ do
 	# Move all files in category $var to $1/$var.  They are initially all in $1/train/
 	mkdir $1/$var
 	cd $1/train/
-	find . -name $var".*" -exec mv -v -t ../$var/ {} +
+	find . -name $var".*" -exec mv -t ../$var/ {} +
 	#find $1/train/ -name $var".*" -exec mv -v -t ../$var {} +
 	cd -
 
@@ -51,10 +51,14 @@ do
 	# Delete now empty temporary directory
 	rmdir $1/sample/$var
 
+	echo "Current working directory is $PWD"
 	echo "Calculating train/valid split for main data for $var"
 	# Train/valid split regular, 10% validation
-	numfiles=$(ls 2>/dev/null -Ub1 -- * | wc -l)
+	cd $1/$var
+	numfiles=$(find . ! -name . -prune ! -type d | grep -c / )
+	cd -
 	numvalid=$(($numfiles/10))
+	echo "Number of files is $numfiles and valid set size is $numvalid"
 
 	echo "Moving validation set for $var"
 	for file in $(ls -p $1/$var | grep -v / | tail -$numvalid)
